@@ -1,0 +1,253 @@
+* {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgb(135, 181, 181);
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.editorWrap {
+  max-width: 600px; 
+  margin: 1.125rem auto;
+}
+
+.toolbar {
+  display: flex;
+   background-color: #4aa3a3;
+   font-size: 1rem;
+   padding: 0.3rem;
+   border: 1px solid #1d2f2f;
+   height: 25.59px;
+   width: 98.65%;
+   align-items: center; 
+   justify-content: space-between;
+   line-height: 24px;
+ 
+ }
+ 
+ .toolbar i {
+   width: 25px; 
+   margin-left: 5px; 
+ }
+ 
+ .toolbar p {
+   font-weight: bold;
+ }
+ 
+ #sourceTA {
+     display: block;
+     margin: 0 auto;
+     background-color: #c0d8d8;
+     width: 99%; 
+     min-height: 200px;
+     margin-bottom: -5px; 
+     outline: none;
+     font-size: 14.675px;
+     padding-left: 5px; 
+     padding-top: 5px; 
+     padding: 5px 2px 2px 5px;
+     resize: vertical; 
+     border: 1px solid #1d2f2f;
+     box-shadow: 1px 1px 10px 2px #3a5f5f;
+ }
+
+@media (max-width: 650px) {
+  .editorWrap {
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .toolbar {
+    height: 20.5px;
+  }
+
+  #sourceTA {
+    height: 200px;
+  }
+}
+
+@media (max-width: 850px) {
+  .editorWrap {
+    max-width: 550px; 
+  }
+}
+
+
+
+/*-------Preview Wrapper---------*/
+
+
+.previewWrapper {
+    margin: 0 auto;
+    max-width: 800px; 
+    
+}
+
+.header {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  height: 33px; 
+  background-color: rgb(74, 163, 163);
+  border: 1px solid black;
+   
+}
+
+.header p {
+  font-weight: bold; 
+  font-size: 1.05rem;
+}
+
+.header i {
+  margin-right: 1rem;
+}
+
+.header .fa-free-code-camp {
+  margin-left: 10px;
+  margin-right: 7px; 
+}
+
+.stayput {
+  position: relative;
+  max-width: 800px;
+  min-height: 200px;
+  margin: 0 auto;
+  background-color: rgb(192, 216, 216);
+}
+
+#targetDiv {
+  position: absolute;
+  max-width: 800px;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  background-color: rgb(192, 216, 216);
+  padding: 0px 16px;
+  overflow-wrap: break-word;
+}
+
+
+@media (max-width: 650px) {
+  #targetDiv {
+    
+    min-height: 164px;
+    
+  }
+
+  .stayput {
+    width: 90vw;
+    max-width: 90vw;
+    min-height: 164px; 
+    
+  }
+
+  .previewWrapper {
+    width: 90vw;
+    max-width: 90vw;
+    min-height: 164px;
+    
+  }
+}
+
+@media (max-width: 850px) {
+  #targetDiv {
+     
+    max-width: 630px;
+    min-height: 164px;
+  }
+
+  .stayput {
+     
+    max-width: 630px;
+    min-height: 164px;
+  }
+
+  .previewWrapper {
+     
+    max-width: 630px; 
+    min-height: 164px;
+  }
+}
+
+
+
+/*--------Preview Labels--------*/
+
+h1 {
+  font-size: 2em;
+  display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  border-bottom: 2px solid #334b4b;
+}
+
+h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid #224b4b;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px; 
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px; 
+  margin-inline-end: 0px;
+  font-size: 1rem;
+}
+
+p img {
+  display: block;
+  max-width: 90%;
+  margin: 2rem auto;
+  padding-bottom: 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  text-indent: initial;
+  border-spacing: 2px; 
+  border-color: grey;
+}
+
+th, td {
+  padding: 1px 5px; 
+  line-height: 24px;
+  border: 2px solid black;
+}
+
+pre {
+  background-color: white;
+  padding: 5px; 
+  line-height: 1.2; 
+  overflow: auto;
+  font-family: monospace;
+}
+code {
+  background-color: white;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+

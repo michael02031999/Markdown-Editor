@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <script src="app.js"></script>
+
+    <script src="C:\Users\Michael's PC\Desktop\Markdown-Previewer\bower_components\showdown\dist\showdown.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/952dc07df4.js" crossorigin="anonymous"></script>
+    
+    <div class="editorWrap">
+        <div class="toolbar">
+            <p><i class="fa fa-free-code-camp"></i>Editor</p>
+            
+            <i class="fa fa-arrows-alt fa1"></i>
+            <i class="fas fa-compress-alt fa2"></i>
+        </div>
+        <textarea id="sourceTA" rows="10" cols="82"></textarea>
+    </div>
+    
+    <div class="previewWrapper">
+        <div class="header">
+            <p><i class="fa fa-free-code-camp"></i>Previewer</p>
+            <i class="fa fa-arrows-alt fa3"></i>
+            <i class="fas fa-compress-alt fa4"></i>
+        </div>
+        <div class="stayput">
+            <div id="targetDiv"></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#sourceTA").on("keyup", function() {
+                converter = new showdown.Converter();
+                $("#targetDiv").html(converter.makeHtml($(this).val()))
+
+                console.log(converter.makeHtml($(this).val()));
+                
+            })
+
+
+            $(".fa2").hide();
+            $(".fa4").hide();
+
+            $(".fa1").click(function () {
+                $(".fa1").hide();
+                $(".fa2").show();
+                $("#sourceTA").css("min-height", "100vh")
+                $(".stayput").hide();
+                $(".targetDiv").hide();
+                $(".header").hide();
+                $(".previewWrapper").hide();
+            })
+            $(".fa2").click (function() {
+                $(".fa2").hide();
+                $(".fa1").show();
+                $("#sourceTA").css("min-height", "200px")
+                $(".stayput").show();
+                $(".targetDiv").show();
+                $(".header").show();
+                $(".previewWrapper").show();
+            })
+
+            $(".fa3").click(function() {
+                $(".fa3").hide();
+                $(".fa4").show();
+                $(".stayput").css("min-height", "100vh")
+                $(".editorWrap").hide();
+            })
+
+            $(".fa4").click(function() {
+                $(".fa4").hide();
+                $(".fa3").show();
+                $(".stayput").css("min-height", "200px")
+                $(".editorWrap").show();
+            })
+            
+
+
+
+
+        })
+    </script>
+
+</body>
+</html>
